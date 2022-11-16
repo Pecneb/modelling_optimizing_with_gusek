@@ -1,0 +1,38 @@
+Problem:    buli
+Rows:       5
+Columns:    2 (2 integer, 0 binary)
+Non-zeros:  8
+Status:     INTEGER OPTIMAL
+Objective:  sandwitch_made = 65 (MAXimum)
+
+   No.   Row name        Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 setIngredientLimits[butter]
+                                 220                         220 
+     2 setIngredientLimits[egg]
+                                 170                         170 
+     3 setIngredientLimits[salami]
+                                  80                         100 
+     4 setIngredientLimits[steak]
+                                  25                          40 
+     5 sandwitch_made
+                                  65                             
+
+   No. Column name       Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 make_n[salami_sandwitch]
+                    *             40             0               
+     2 make_n[steak_sandwitch]
+                    *             25             0               
+
+Integer feasibility conditions:
+
+KKT.PE: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.PB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+End of output

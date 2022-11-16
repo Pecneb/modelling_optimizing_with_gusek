@@ -1,0 +1,46 @@
+Problem:    farmok_picaok
+Rows:       6
+Columns:    6 (6 integer, 0 binary)
+Non-zeros:  18
+Status:     INTEGER OPTIMAL
+Objective:  megtettut = 260000 (MINimum)
+
+   No.   Row name        Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 maxKiad[Vac]              150                         150 
+     2 maxKiad[Kecskemet]
+                                 150                         150 
+     3 maxKiad[Sopron]
+                                 100                         100 
+     4 maxFogad[Gyor]
+                                 250           250               
+     5 maxFogad[Szolnok]
+                                 150           150               
+     6 megtettut              260000                             
+
+   No. Column name       Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 szallitasok[Vac,Gyor]
+                    *            100             0               
+     2 szallitasok[Vac,Szolnok]
+                    *             50             0               
+     3 szallitasok[Kecskemet,Gyor]
+                    *            150             0               
+     4 szallitasok[Kecskemet,Szolnok]
+                    *              0             0               
+     5 szallitasok[Sopron,Gyor]
+                    *              0             0               
+     6 szallitasok[Sopron,Szolnok]
+                    *            100             0               
+
+Integer feasibility conditions:
+
+KKT.PE: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.PB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+End of output

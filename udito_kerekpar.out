@@ -1,0 +1,63 @@
+Problem:    udito_kerekpar
+Rows:       8
+Columns:    12 (12 integer, 0 binary)
+Non-zeros:  35
+Status:     INTEGER OPTIMAL
+Objective:  overall_cost = 16365000 (MINimum)
+
+   No.   Row name        Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 deliverAllProduct[Toltestava]
+                                 100                         100 
+     2 deliverAllProduct[Komarom]
+                                 400                         400 
+     3 deliverAllProduct[Dunaszerdahely]
+                                 250                         250 
+     4 setBikerCapacity[Seregelyes]
+                                 100           100               
+     5 setBikerCapacity[Gyor]
+                                 350           350               
+     6 setBikerCapacity[Asvanyraro]
+                                  50            50               
+     7 setBikerCapacity[Szolnok]
+                                 250           250               
+     8 overall_cost        3.145e+06                             
+
+   No. Column name       Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 deliveries[Toltestava,Seregelyes]
+                    *              0             0               
+     2 deliveries[Toltestava,Gyor]
+                    *             50             0               
+     3 deliveries[Toltestava,Asvanyraro]
+                    *             50             0               
+     4 deliveries[Toltestava,Szolnok]
+                    *              0             0               
+     5 deliveries[Komarom,Seregelyes]
+                    *            100             0               
+     6 deliveries[Komarom,Gyor]
+                    *             50             0               
+     7 deliveries[Komarom,Asvanyraro]
+                    *              0             0               
+     8 deliveries[Komarom,Szolnok]
+                    *            250             0               
+     9 deliveries[Dunaszerdahely,Seregelyes]
+                    *              0             0               
+    10 deliveries[Dunaszerdahely,Gyor]
+                    *            250             0               
+    11 deliveries[Dunaszerdahely,Asvanyraro]
+                    *              0             0               
+    12 deliveries[Dunaszerdahely,Szolnok]
+                    *              0             0               
+
+Integer feasibility conditions:
+
+KKT.PE: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.PB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+End of output

@@ -1,0 +1,49 @@
+Problem:    festival_with_sets_params
+Rows:       8
+Columns:    5 (5 integer, 5 binary)
+Non-zeros:  25
+Status:     INTEGER OPTIMAL
+Objective:  overall_cost = 637 (MINimum)
+
+   No.   Row name        Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 bands_atleast_once[HAGGARD]
+                                   1             1               
+     2 bands_atleast_once[STRATOVARIUS]
+                                   1             1               
+     3 bands_atleast_once[EPICA]
+                                   2             1               
+     4 bands_atleast_once[DALRIADA]
+                                   1             1               
+     5 bands_atleast_once[APOCALYPTICA]
+                                   1             1               
+     6 bands_atleast_once[LIVA]
+                                   2             1               
+     7 bands_atleast_once[ELUVEITIE]
+                                   1             1               
+     8 overall_cost              637                             
+
+   No. Column name       Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 buy_ticket[F1]
+                    *              0             0             1 
+     2 buy_ticket[F2]
+                    *              0             0             1 
+     3 buy_ticket[F3]
+                    *              0             0             1 
+     4 buy_ticket[F4]
+                    *              1             0             1 
+     5 buy_ticket[F5]
+                    *              1             0             1 
+
+Integer feasibility conditions:
+
+KKT.PE: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.PB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+End of output

@@ -1,0 +1,39 @@
+Problem:    froccs_with_sets_params
+Rows:       3
+Columns:    10 (10 integer, 0 binary)
+Non-zeros:  30
+Status:     INTEGER OPTIMAL
+Objective:  income = 208320 (MAXimum)
+
+   No.   Row name        Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 wineLimit[wine]
+                                1000                        1000 
+     2 wineLimit[water]
+                                1500                        1500 
+     3 income                 208320                             
+
+   No. Column name       Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 sells[kf]    *            832             0               
+     2 sells[nf]    *              0             0               
+     3 sells[hl]    *              2             0               
+     4 sells[hm]    *              0             0               
+     5 sells[vhm]   *              0             0               
+     6 sells[krf]   *              0             0               
+     7 sells[sf]    *              0             0               
+     8 sells[pf]    *              0             0               
+     9 sells[hu]    *              0             0               
+    10 sells[lf]    *            166             0               
+
+Integer feasibility conditions:
+
+KKT.PE: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.PB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+End of output

@@ -1,0 +1,55 @@
+Problem:    udito
+Rows:       4
+Columns:    12 (12 integer, 12 binary)
+Non-zeros:  24
+Status:     INTEGER OPTIMAL
+Objective:  overall_cost = 7300 (MINimum)
+
+   No.   Row name        Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 deliverAllProduct[Toltestava]
+                                 100           100             = 
+     2 deliverAllProduct[Komarom]
+                                 400           400             = 
+     3 deliverAllProduct[Dunaszerdahely]
+                                 250           250             = 
+     4 overall_cost             7300                             
+
+   No. Column name       Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 delivers[Toltestava,Seregelyes]
+                    *              1             0             1 
+     2 delivers[Toltestava,Gyor]
+                    *              0             0             1 
+     3 delivers[Toltestava,Asvanyraro]
+                    *              0             0             1 
+     4 delivers[Toltestava,Szolnok]
+                    *              0             0             1 
+     5 delivers[Komarom,Seregelyes]
+                    *              0             0             1 
+     6 delivers[Komarom,Gyor]
+                    *              1             0             1 
+     7 delivers[Komarom,Asvanyraro]
+                    *              1             0             1 
+     8 delivers[Komarom,Szolnok]
+                    *              0             0             1 
+     9 delivers[Dunaszerdahely,Seregelyes]
+                    *              0             0             1 
+    10 delivers[Dunaszerdahely,Gyor]
+                    *              0             0             1 
+    11 delivers[Dunaszerdahely,Asvanyraro]
+                    *              0             0             1 
+    12 delivers[Dunaszerdahely,Szolnok]
+                    *              1             0             1 
+
+Integer feasibility conditions:
+
+KKT.PE: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.PB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+End of output

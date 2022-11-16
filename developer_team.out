@@ -1,0 +1,53 @@
+Problem:    developer_team
+Rows:       9
+Columns:    6 (6 integer, 6 binary)
+Non-zeros:  31
+Status:     INTEGER OPTIMAL
+Objective:  happiness = 15 (MAXimum)
+
+   No.   Row name        Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 setMinTeamSizeLimits
+                                   4             3               
+     2 setMaxTeamSizeLimits
+                                   4                           4 
+     3 setTeamSkillRequireMents[Backend]
+                                   2             1               
+     4 setTeamSkillRequireMents[Frontend]
+                                   2             1               
+     5 setTeamSkillRequireMents[CSS]
+                                   3             1               
+     6 setTeamSkillRequireMents[DB]
+                                   1             1               
+     7 setTeamSkillRequireMents[Agile]
+                                   1             1               
+     8 setTeamSkillRequireMents[DevOps]
+                                   1             1               
+     9 happiness                  15                             
+
+   No. Column name       Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 most_efficient_team[Tibor]
+                    *              1             0             1 
+     2 most_efficient_team[David]
+                    *              1             0             1 
+     3 most_efficient_team[Botond]
+                    *              0             0             1 
+     4 most_efficient_team[Bence]
+                    *              1             0             1 
+     5 most_efficient_team[Mark]
+                    *              1             0             1 
+     6 most_efficient_team[Balazs]
+                    *              0             0             1 
+
+Integer feasibility conditions:
+
+KKT.PE: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.PB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+End of output
