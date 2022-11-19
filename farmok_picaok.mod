@@ -1,18 +1,29 @@
 set farmok;
+/* Farms */
+
 set piacok;
+/* Markets */
 
-param tavolsagok { farmok, piacok };
-param termeles { farmok };
-param befogadas { piacok };
+param termeles { i in farmok };
+/* capacity of farms i in cases */
 
-var szallitasok { farmok, piacok } >= 0 integer;
+param befogadas { j in piacok };
+/* demand at market j in cases */
 
-param ktg;
+param tavolsagok { i in farmok, j in piacok };
+/* distance in km */
 
-s.t. maxKiad { f in farmok }: sum { p in piacok } szallitasok [ f, p ], <= termeles [ f ];
-s.t. maxFogad { p in piacok }: sum { f in farmok } szallitasok [ f, p ], >= befogadas [ p ];
+param ktg; # ft / kg * km
+/* transport cost per kg per km */
 
-minimize megtettut: ktg * sum { f in farmok, p in piacok } szallitasok [ f, p ] * tavolsagok [ f, p ];
+var szallitasok { i in farmok, j in piacok } >= 0;
+/* shipment quantities in cases */
+
+s.t. supply { i in farmok }: sum { j in piacok } szallitasok [ i, j ], <= termeles [ i ];
+
+s.t. demand { j in piacok }: sum { i in farmok } szallitasok [ i, j ], >= befogadas [ j ];
+
+minimize koltseg: ktg * sum { i in farmok, j in piacok } szallitasok [ i, j ] * tavolsagok [ i, j ];
 
 data;
 param termeles:=
