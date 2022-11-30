@@ -1,23 +1,27 @@
-var axa binary;
-var axb binary;
-var axd binary;
-var bxc binary;
-var bxd binary;
-var dxe binary;
-var dxg binary;
-var cxe binary;
-var cxf binary;
-var fxg binary;
-var exg binary;
+var ata binary;
+var atb binary;
+var atd binary;
+var btd binary;
+var btc binary;
+var cte binary;
+var ctf binary;
+var dte binary;
+var dtg binary;
+var etg binary;
+var ftg binary;
 
-s.t. A: axa = 1;
-s.t. B: axb <= 1;
-s.t. D: axd + bxd <= 1;
-s.t. C: bxc <= 1;
-s.t. E: dxe + cxe <= 1;
-s.t. F: cxf <= 1;
-s.t. G: dxg + exg + fxg = 1;
+s.t. AtA: ata = 1;
+s.t. G: dtg + etg + ftg = 1;
+s.t. A: atb + atd = ata;
+s.t. B: btd + btc = atb;
+s.t. C: cte + ctf = btc;
+s.t. D: dte + dtg = atd + btd;
+s.t. E: dte + etg = cte;
+s.t. F: ftg = ctf;
 
-s.t. connect: axa + axb + axd + bxc + bxd + dxe + dxg + cxe + cxf + fxg + exg >= 3;
 
-minimize road_cost: axb * 2 + axd * 4 + bxc * 4 + bxd * 3 + cxe * 4 + cxf * 5 + dxe * 3 + dxg * 4 + exg * 1 + fxg * 3;
+minimize cost: atb * 2 + atd * 4 + btc * 4 + btd * 3 + cte * 4 + ctf * 5 + dte * 3 + dtg * 4 + ftg * 3;
+
+solve;
+
+end;
