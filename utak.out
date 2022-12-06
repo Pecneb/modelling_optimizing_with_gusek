@@ -1,0 +1,44 @@
+Problem:    utak
+Rows:       9
+Columns:    11 (11 integer, 11 binary)
+Non-zeros:  31
+Status:     INTEGER OPTIMAL
+Objective:  cost = 8 (MINimum)
+
+   No.   Row name        Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 AtA                         1             1             = 
+     2 G                           1             1             = 
+     3 A                           0            -0             = 
+     4 B                           0            -0             = 
+     5 C                           0            -0             = 
+     6 D                           0            -0             = 
+     7 E                           0            -0             = 
+     8 F                           0            -0             = 
+     9 cost                        8                             
+
+   No. Column name       Activity     Lower bound   Upper bound
+------ ------------    ------------- ------------- -------------
+     1 ata          *              1             0             1 
+     2 atb          *              0             0             1 
+     3 atd          *              1             0             1 
+     4 btd          *              0             0             1 
+     5 btc          *              0             0             1 
+     6 cte          *              0             0             1 
+     7 ctf          *              0             0             1 
+     8 dte          *              0             0             1 
+     9 dtg          *              1             0             1 
+    10 etg          *              0             0             1 
+    11 ftg          *              0             0             1 
+
+Integer feasibility conditions:
+
+KKT.PE: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.PB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+End of output

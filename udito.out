@@ -1,54 +1,70 @@
 Problem:    udito
-Rows:       4
-Columns:    12 (12 integer, 12 binary)
-Non-zeros:  24
-Status:     INTEGER OPTIMAL
-Objective:  overall_cost = 7300 (MINimum)
+Rows:       8
+Columns:    12
+Non-zeros:  36
+Status:     OPTIMAL
+Objective:  overall_cost = 628250 (MINimum)
 
-   No.   Row name        Activity     Lower bound   Upper bound
------- ------------    ------------- ------------- -------------
-     1 deliverAllProduct[Toltestava]
-                                 100           100             = 
-     2 deliverAllProduct[Komarom]
-                                 400           400             = 
-     3 deliverAllProduct[Dunaszerdahely]
-                                 250           250             = 
-     4 overall_cost             7300                             
+   No.   Row name   St   Activity     Lower bound   Upper bound    Marginal
+------ ------------ -- ------------- ------------- ------------- -------------
+     1 setSupply[Toltestava]
+                    NU           100                         100          -450 
+     2 setSupply[Komarom]
+                    NU           400                         400          -200 
+     3 setSupply[Dunaszerdahely]
+                    B            250                         250 
+     4 setDemand[Seregelyes]
+                    NL           100           100                         900 
+     5 setDemand[Gyor]
+                    NL           350           350                         550 
+     6 setDemand[Asvanyraro]
+                    NL            50            50                         700 
+     7 setDemand[Szolnok]
+                    NL           250           250                        1700 
+     8 overall_cost B         617500                             
 
-   No. Column name       Activity     Lower bound   Upper bound
------- ------------    ------------- ------------- -------------
+   No. Column name  St   Activity     Lower bound   Upper bound    Marginal
+------ ------------ -- ------------- ------------- ------------- -------------
      1 delivers[Toltestava,Seregelyes]
-                    *              1             0             1 
+                    NL             0             0                         350 
      2 delivers[Toltestava,Gyor]
-                    *              0             0             1 
+                    B            100             0               
      3 delivers[Toltestava,Asvanyraro]
-                    *              0             0             1 
+                    NL             0             0                         100 
      4 delivers[Toltestava,Szolnok]
-                    *              0             0             1 
+                    NL             0             0                         650 
      5 delivers[Komarom,Seregelyes]
-                    *              0             0             1 
+                    B            100             0               
      6 delivers[Komarom,Gyor]
-                    *              1             0             1 
+                    B              0             0               
      7 delivers[Komarom,Asvanyraro]
-                    *              1             0             1 
+                    B             50             0               
      8 delivers[Komarom,Szolnok]
-                    *              0             0             1 
+                    B            250             0               
      9 delivers[Dunaszerdahely,Seregelyes]
-                    *              0             0             1 
+                    NL             0             0                         300 
     10 delivers[Dunaszerdahely,Gyor]
-                    *              0             0             1 
+                    B            250             0               
     11 delivers[Dunaszerdahely,Asvanyraro]
-                    *              0             0             1 
+                    NL             0             0                         100 
     12 delivers[Dunaszerdahely,Szolnok]
-                    *              1             0             1 
+                    NL             0             0                         300 
 
-Integer feasibility conditions:
+Karush-Kuhn-Tucker optimality conditions:
 
 KKT.PE: max.abs.err = 0.00e+00 on row 0
         max.rel.err = 0.00e+00 on row 0
         High quality
 
 KKT.PB: max.abs.err = 0.00e+00 on row 0
+        max.rel.err = 0.00e+00 on row 0
+        High quality
+
+KKT.DE: max.abs.err = 0.00e+00 on column 0
+        max.rel.err = 0.00e+00 on column 0
+        High quality
+
+KKT.DB: max.abs.err = 0.00e+00 on row 0
         max.rel.err = 0.00e+00 on row 0
         High quality
 

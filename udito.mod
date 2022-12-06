@@ -1,17 +1,21 @@
 set factory;
 set store;
 
-param distance { factory, store } integer >= 0; # km
-param output_capacity { factory } integer >= 0; # l
-param input_capacity { store } integer >= 0; # l
+
+param capacity { i in factory } integer >= 0; # l
+param demand { j in store } integer >= 0; # l
+
+param distance { i in factory, j in store } integer >= 0; # km
 
 param fuel_cost; # cost / km
 
-var delivers { factory, store } binary;
+var delivers { i in factory, j in store } >= 0;
 
-s.t. deliverAllProduct { f in factory }: sum { s in store } input_capacity [ s ] * delivers [ f, s ], = output_capacity [ f ];
+s.t. setSupply { i in factory }: sum { j in store } delivers [ i, j ], <= capacity [ i ];
 
-minimize overall_cost: sum { f in factory, s in store } delivers [ f, s ] * distance [ f, s] * fuel_cost * 2;
+s.t. setDemand { j in store }: sum { i in factory } delivers [ i, j ], >= demand [ j ];
+
+minimize overall_cost: (sum { i in factory, j in store } delivers [ i, j ] * distance [ i, j ] * fuel_cost) + ( sum { i in factory, j in store } ( delivers [ i, j ] - ( delivers [ i, j ] - 1 ) ) * distance [ i, j ] * fuel_cost );
 
 solve;
 data;
@@ -24,12 +28,12 @@ Toltestava				80				10		35				190
 Komarom 				70				35		50				150
 Dunaszerdahely	120				55		80				200;
 
-param output_capacity :=
+param capacity :=
 Toltestava				100
 Komarom 				400
 Dunaszerdahely	250;
 
-param input_capacity :=
+param demand :=
 Seregelyes 	100
 Gyor 				350
 Asvanyraro 	50
