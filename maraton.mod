@@ -43,7 +43,7 @@ s.t. dontOverBuy { m in milestones }:
 s.t. toReachNext { m in milestones: m != nMilestones }:
      wellnessatarrival[m] + ( sum { g in goods } tobuy[m, g] * nutrienttable[g] ) >= deteriorationrate * ( distances[m+1] - distances[m] );
 
-minimize cost: sum { m in milestones, g in goods } tobuy[m, g];
+minimize cost: sum { m in milestones, g in goods } tobuy[m, g] * costofgoods[g];
 
 solve;
 
@@ -67,11 +67,11 @@ param maxwellness := 15;
 param deteriorationrate := 1;
 
 param : milestone distances :=
-1 first        8
-2 second  16
-3 third       24
-4 fourth     32
-5 fifht        40;
+1            first            8
+2            second     16
+3            third          24
+4            fourth        32
+5            fifht           40;
 
 param nutrienttable :=
 water 1
